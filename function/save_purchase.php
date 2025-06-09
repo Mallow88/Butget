@@ -1,5 +1,5 @@
 <?php
-include 'bd/db.php';
+include '../db/db.php';
 
 $item_name = $_POST['item_name'];
 $quantity = $_POST['quantity'];
@@ -14,7 +14,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("sidsd", $item_name, $quantity, $unit, $price, $purchase_date);
 
 if ($stmt->execute()) {
-    echo "<script>alert('บันทึกรายการเรียบร้อยแล้ว'); window.location.href='index.php';</script>";
+    echo "<script>alert('บันทึกรายการเรียบร้อยแล้ว'); window.location.href='../page/index.php';</script>";
 } else {
     echo "เกิดข้อผิดพลาด: " . $conn->error;
 }

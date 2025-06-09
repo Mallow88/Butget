@@ -1,3 +1,5 @@
+<?php include('../db/db.php'); ?>
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -11,25 +13,25 @@
   <div class="card shadow-lg rounded-4">
     <div class="card-body">
       <h3 class="mb-4">📦 บันทึกรายการซื้อวัตถุดิบ</h3>
-      <form action="function/save_purchase.php" method="POST">
+      <form action="../function/save_purchase.php" method="POST">
         <div class="mb-3">
-          <label for="item_name" class="form-label">ชื่อวัตถุดิบ</label>
+          <label class="form-label">ชื่อวัตถุดิบ</label>
           <input type="text" class="form-control" name="item_name" required>
         </div>
         <div class="mb-3">
-          <label for="quantity" class="form-label">จำนวน</label>
+          <label class="form-label">จำนวน</label>
           <input type="number" class="form-control" name="quantity" required>
         </div>
         <div class="mb-3">
-          <label for="unit" class="form-label">หน่วย (เช่น ก้อน, แพ็ค, ฟอง)</label>
+          <label class="form-label">หน่วย</label>
           <input type="text" class="form-control" name="unit" required>
         </div>
         <div class="mb-3">
-          <label for="price" class="form-label">ราคาทั้งหมด (บาท)</label>
+          <label class="form-label">ราคา (บาท)</label>
           <input type="number" class="form-control" name="price" step="0.01" required>
         </div>
         <div class="mb-3">
-          <label for="purchase_date" class="form-label">วันที่ซื้อ</label>
+          <label class="form-label">วันที่ซื้อ</label>
           <input type="date" class="form-control" name="purchase_date" value="<?= date('Y-m-d') ?>" required>
         </div>
         <button type="submit" class="btn btn-primary">บันทึก</button>
