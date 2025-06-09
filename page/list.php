@@ -21,7 +21,7 @@ $purchases = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="container mt-5">
   <div class="d-flex justify-content-between align-items-center mb-3">
     <h3>📋 รายการวัตถุดิบที่ซื้อ</h3>
-    <a href="index.php" class="btn btn-success">➕ เพิ่มรายการใหม่</a>
+    <a href="add_purchase" class="btn btn-success">➕ เพิ่มรายการใหม่</a>
   </div>
 
   <?php if (count($purchases) > 0): ?>
