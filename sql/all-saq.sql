@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS budget_db;
+USE budget_db;
+
+CREATE TABLE purchases (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  item_name VARCHAR(255) NOT NULL,
+  quantity INT NOT NULL,
+  unit VARCHAR(50) NOT NULL,
+  price DECIMAL(10, 2) NOT NULL,
+  purchase_date DATE NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
