@@ -11,7 +11,7 @@
   <div class="card shadow-lg rounded-4">
     <div class="card-body">
       <h3 class="mb-4">📦 บันทึกรายการซื้อวัตถุดิบ</h3>
-      <form action="save_purchase.php" method="POST">
+      <form action="function/save_purchase.php" method="POST">
         <div class="mb-3">
           <label for="item_name" class="form-label">ชื่อวัตถุดิบ</label>
           <input type="text" class="form-control" name="item_name" required>
