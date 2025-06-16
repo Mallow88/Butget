@@ -31,6 +31,12 @@ include('../config/db.php');
           <label class="form-label">หน่วย</label>
           <input type="text" class="form-control" name="unit" required>
         </div>
+
+        <div class="mb-3">
+    <label>หน่วยนับแยก (เช่น 10 ฟอง, 6 ขวด) <small class="text-muted">(ไม่บังคับ)</small></label>
+    <input type="number" name="unit_sub" class="form-control" min="1">
+  </div>
+  
         <div class="mb-3">
           <label class="form-label">ราคา (บาท)</label>
           <input type="number" class="form-control" name="price" step="0.01" required>
@@ -42,6 +48,7 @@ include('../config/db.php');
         <button type="submit" class="btn btn-primary">บันทึก</button>
       </form>
     </div>
+    <a href="list.php" class="btn btn-success"> ย้อนกลับ</a>
   </div>
 </div>
 
